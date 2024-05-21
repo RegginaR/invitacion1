@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Fiesta en la piscina</title>
+    <style>
+        body {
+            background-color: #87CEEB; /* Azul cielo */
+            font-family: Arial, sans-serif;
+            color: black; /* Letra color negra */
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 32px; /* Tamaño de letra del título aumentado */
+            margin-top: 0;
+        }
+        p {
+            font-size: 18px; /* Tamaño de letra de párrafo aumentado */
+        }
+        a, input[type="submit"], button {
+            font-size: 18px; /* Tamaño de letra de enlaces y botones aumentado */
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            color: black;
+            background-color: #FFFFFF; /* Color de fondo de enlaces y botones */
+            display: inline-block;
+        }
+        a:hover, input[type="submit"]:hover, button:hover {
+            background-color: #CCCCCC; /* Color de fondo al pasar el cursor */
+        }
+        .emojis {
+            font-size: 48px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fiesta en la piscina</h1>
+        <p>¡La fiesta comienza de 3 a 4 y termina a las 8!</p>
+        <p>¡No olvides traer tu traje de baño!</p>
+        <p>
+            Dirección: 
+            <a href="http://maps.app.goo.gl/1515mMEjFppzN7pS8?g_st=ic">¡Haz clic aquí para obtener la dirección!</a>
+        </p>
+        <p>
+            Cuestionario de asistencia:
+            <form action="http://api.whatsapp.com/send" method="GET" target="_blank">
+                <input type="hidden" name="phone" value="+525638222182">
+                <input type="hidden" name="text" value="Asistiré a la fiesta en la piscina">
+                <input type="submit" value="Asistiré">
+                <button type="button" onclick="showEmoji()">No asistiré</button>
+            </form>
+        </p>
+        <div class="emojis" id="emoji" style="display: none;">😢</div>
+    </div>
+
+    <script>
+        function showEmoji() {
+            var emoji = document.getElementById('emoji');
+            emoji.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
